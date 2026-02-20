@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EcoTrack Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>EcoTrack Dashboard</h1>
+
+    <!-- 🔹 Navigation -->
+    <div style="margin-bottom: 20px;">
+        <button onclick="window.location.href='pages/add-activity.html'">
+            ➕ Add Activity
+        </button>
+
+        <button onclick="location.reload()">
+            🔄 Refresh Dashboard
+        </button>
+
+        <button onclick="testBackend()">
+            🧪 Test Backend
+        </button>
+    </div>
+
+    <!-- 🔹 Search By User -->
+    <div style="margin: 20px 0;">
+        <input type="text" id="searchUserId" placeholder="Enter User ID">
+        <button onclick="filterByUser()">🔍 Search</button>
+    </div>
+
+
+    <!-- 🔹 Total Emission -->
+    <h3 id="totalEmission">Total Carbon Emission: --</h3>
+
+    <p id="result"></p>
+
+    <!-- 🔹 Activities Table -->
+    <h2>All Activities</h2>
+
+    <table id="activitiesTable" border="1">
+        <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Activity Type</th>
+            <th>Carbon Emission</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
